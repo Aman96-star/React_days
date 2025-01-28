@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Book</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Add basic styles for layout if needed */
+    .instruction {
+      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+    .book {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .page {
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 200px;
+      min-height: 300px;
+      cursor: pointer;
+    }
+    .cover-front {
+      background-color: lightblue;
+    }
+    .text-page {
+      background-color: white;
+    }
+    .hat {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instruction">Flip the page</div>
+
+  <div class="book">
+    <!-- Cover Front -->
+    <div class="page cover-front" onclick="movePage(this, 1)">
+      <h1>Mrs. Dalloway</h1>
+      <div class="hat">
+        <i class="fab fa-pied-piper-hat"></i>
+      </div>
+      <h2>Virginia Woolf</h2>
+    </div>
+
+    <!-- Additional Pages -->
+    <div class="page cover-front" onclick="movePage(this, 2)"></div>
+
+    <div class="page text-page" onclick="movePage(this, 3)">
+      <p>Mrs. Dalloway said she would buy the flowers herself.</p>
+      <p>For Lucy had her work cut out for her...</p>
+      <p>What a lark! What a plunge!... Peter Walsh...</p>
+    </div>
+
+    <div class="page text-page" onclick="movePage(this, 4)">
+      <p>Vanished—how strange it was! A few sayings like this about cabbages.</p>
+      <p>She stiffened a little on the kerb, waiting for Durtnall's van to pass...</p>
+      <p>For having lived in Westminster...</p>
+    </div>
+
+    <div class="page text-page" onclick="movePage(this, 5)">
+      <p>The uproar; the carriages, motor cars...</p>
+      <p>For it was the middle of June. The War was over...</p>
+    </div>
+
+    <div class="page text-page" onclick="movePage(this, 6)">
+      <p>...Eighteenth-century settings to tempt Americans...</p>
+      <p>"Good-morning to you, Clarissa!" said Hugh...</p>
+      <p>"I love walking in London," said Mrs. Dalloway...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+  <!-- <script>
+    // Function to move page
+    function movePage(element, pageNum) {
+      console.log(`Page ${pageNum} clicked`);
+      element.style.transform = `rotateY(180deg)`;
+    }
+
+    // Generate additional blank pages
+    const bookContainer = document.querySelector(".book");
+    for (let i = 7; i <= 100; i++) {
+      const page = document.createElement("div");
+      page.className = "page";
+      page.setAttribute("onclick", `movePage(this, ${i})`);
+      bookContainer.appendChild(page);
+    }
+  </script> -->
+
+
+<div class="page cover-front" onclick="movePage(this)">
+    <h1>Mrs. Dalloway</h1>
+    <div class="hat">
+      <i class="fab fa-pied-piper-hat"></i>
+    </div>
+    <h2>Virginia Woolf</h2>
+  </div>
