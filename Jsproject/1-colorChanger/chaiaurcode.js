@@ -1,7 +1,7 @@
 // first we will select all the buttons 
 const buttons = document.querySelectorAll('.button')
 // console.log(buttons)
-
+// sicd
 const body =document.querySelector('body')
 
 // here we can use for each method bcz it make nodelist and use of e.g., querySelectorAll
